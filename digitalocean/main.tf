@@ -13,7 +13,7 @@ provider "digitalocean" {
 
 resource "digitalocean_ssh_key" "do_ssh_key" {
   name       = "PAT"
-  public_key = file(var.public_key)
+  public_key = file("/Users/senyo/.ssh/id_digitalocean.pub")
 }
 
 resource "digitalocean_droplet" "droplet" {
